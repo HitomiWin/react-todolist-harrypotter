@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Navbar />
         <TodoContextProvider>
-        <Route exact path ="/" component={Home} />
+        <Route exact path ="/react-todolist-harrypotter" component={Home} />
         <Route exact path="/about" component={About}/>
         <Route exact path="/add-todo" component={AddTodoForm} />
         </TodoContextProvider>

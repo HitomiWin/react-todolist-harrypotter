@@ -68,6 +68,7 @@ const TodoContextProvider =(props)=>{
       time, 
     }
     setTodos([newTodo, ...todos])
+    console.log(todos)
     setTodosChanged(true)
     history.push('/')
   }

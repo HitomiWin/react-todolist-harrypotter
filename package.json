@@ -1,5 +1,6 @@
 {
-  "name": "shawn-react-todolist",
+  "homepage":"http://www.hwsutekisait.se/react-todolist-harrypotter",
+  "name": "react-todolist-harrypotter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
