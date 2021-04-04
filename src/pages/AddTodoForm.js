@@ -15,7 +15,7 @@ const AddTodoForm = () => {
         <input  className="todo" id="todo" type="text" name="todo" required onChange={(e)=>setTodo(e.target.value)}/>   
         <label htmlFor="author">Author</label>
         <input  id="author" className="author"  type="text" name="author" required  onChange={(e)=>setAuthor(e.target.value)}/>
-        <button type="submit">Add</button>
+        <button style={{margin:"1rem 0", padding:"0 1rem"}}type="submit">Add</button>
     </form>
   </div>
   )

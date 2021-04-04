@@ -3,14 +3,13 @@ import {useContext, useState} from "react"
 import {TodoContext} from "../contexts/TodoContext";
 import TodoList from "../components/TodoList";
 import DoneList from "../components/DoneList";
-import dumbledore from "../assets/dumbledore-image.jpg"
+import owl from "../assets/kevin-mueller-KBHqwZ4z69Y-unsplash.jpg";
 function Home() {
   const {todos, doneTodos} =useContext(TodoContext )
-  const[image, setImage]=useState(dumbledore)
+  const[image]=useState(owl)
   return (
     <div className="home">
-      <h1>Preparing for battle</h1> 
-     
+      <h1>Preparing for battle</h1>     
       {todos.length>0 && todos.map((todo,i)=>(
        <TodoList key={i} todo={todo} />             
         ))}
@@ -19,8 +18,11 @@ function Home() {
         ))}
       {doneTodos.length===0 && todos.length===0 
       &&
-        <img className="image" src={image} alt="image"/>      
-        }
+     <div> 
+      <h1>Are you ready for battle?</h1>
+        <img className="owlImage" src={image} alt="image"/>      
+      </div>
+      }
     </div>
   )
 }

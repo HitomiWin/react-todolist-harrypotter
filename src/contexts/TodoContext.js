@@ -47,13 +47,15 @@ const TodoContextProvider =(props)=>{
     setDoneTodosChanged(false)
   },[isDoneTodosChanged])
 
-  const removeTodo=(index)=>{
+  const removeTodo=(index,e)=>{
+    e.stopPropagation()
     const updatedTodos = [...todos]
     updatedTodos.splice(index,1)   
     setTodos(updatedTodos)
     setTodosChanged(true)
   }
-  const removeDoneTodo=(index)=>{
+  const removeDoneTodo=(index,e)=>{
+    e.stopPropagation()
     const updatedDoneTodos = [...doneTodos]
     updatedDoneTodos.splice(index,1)   
     setDoneTodos(updatedDoneTodos)
@@ -92,7 +94,8 @@ const TodoContextProvider =(props)=>{
     setTodosChanged(true)
     setDoneTodosChanged(true)
   }
-  const upTodo=(todo)=>{
+  const upTodo=(todo,e)=>{
+    e.stopPropagation()
     const i =todos.indexOf(todo)-1
     const newTodos = [...todos] ;  
     if(i===-1){
@@ -105,7 +108,8 @@ const TodoContextProvider =(props)=>{
     }
     
   }
-  const downTodo=(todo)=>{
+  const downTodo=(todo,e)=>{
+    e.stopPropagation()
     const i =todos.indexOf(todo)
     const newTodos = [...todos] ;  
     if(i===newTodos.length-1){

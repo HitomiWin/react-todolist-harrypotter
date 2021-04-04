@@ -9,19 +9,19 @@ const TodoList = (props) => {
   return (
     <div >
       <ul>
-    <li className="todo-list-container" >
+    <li className="todo-list-container" onClick={()=>moveToDoneList(props.todo)}  >
     <div className="arrow-container">
-      <span onClick={()=>upTodo(props.todo)} className="arrow">&#8593;</span>
-      <span onClick={()=>downTodo(props.todo)} className="arrow">&#8595;</span> 
+      <span onClick={(e)=>upTodo(props.todo,e)} className="arrow">&#8593;</span>
+      <span onClick={(e)=>downTodo(props.todo,e)} className="arrow">&#8595;</span> 
     </div>  
-      <div  onClick={()=>moveToDoneList(props.todo)} className="todo" >
+      <div  className="todo" >
         <p><span>{props.todo.todo}</span></p>         
         <div className="sub-disc">
         <p>Created by <span className="author">{props.todo.author}</span></p> 
         <p className="time"><span>{time}</span></p>
         </div>
       </div>   
-      <p onClick={()=>removeTodo(props.todo)} className="remove-button">X</p>
+      <p onClick={(e)=>removeTodo(props.todo,e)} className="remove-button">X</p>
     </li>        
   </ul>
     </div>
